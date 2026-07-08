@@ -1,2 +1,0 @@
-# webcat
-WEBSITE for remocat
