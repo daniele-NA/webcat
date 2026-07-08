@@ -15,58 +15,185 @@
 <body>
 
 <header class="header">
-    <div class="brand">
-        <img src="remocat.svg" alt="Remocat"/>
-        <span>Remocat</span>
+    <div class="header-inner">
+        <div class="brand">
+            <img src="remocat.svg" alt="Remocat"/>
+            <span>Remocat</span>
+        </div>
+        <div class="lang-switch">
+            <select id="langSelect" aria-label="Language / Lingua">
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
     </div>
 </header>
 
 <main class="wrap">
     <div class="page-head">
-        <p class="eyebrow">Accessibility</p>
-        <h1>Accessibility Service</h1>
+        <p class="eyebrow" data-i18n="eyebrow">Accessibility</p>
+        <h1 data-i18n="h1">Accessibility Service</h1>
     </div>
 
     <div class="content">
-        <h2>Why do we need Accessibility Service?</h2>
-        <p>
+        <h2 data-i18n="h2_why">Why do we need Accessibility Service?</h2>
+        <p data-i18n="p_why">
             Remocat requires the Accessibility Service permission to monitor failed unlock attempts on your
             device. This allows the app to detect unauthorized access attempts and automatically take a photo
             of the person trying to unlock your device.
         </p>
 
-        <h2>What data is collected?</h2>
+        <h2 data-i18n="h2_data">What data is collected?</h2>
         <ul>
-            <li>No personal data or images are shared or uploaded anywhere.</li>
-            <li>Photos are stored only locally on your device for your review.</li>
+            <li data-i18n="li_data1">No personal data or images are shared or uploaded anywhere.</li>
+            <li data-i18n="li_data2">Photos are stored only locally on your device for your review.</li>
         </ul>
 
-        <h2>How does Remocat respect your privacy?</h2>
+        <h2 data-i18n="h2_respect">How does Remocat respect your privacy?</h2>
         <ul>
-            <li>The Accessibility Service is used solely for security monitoring related to device unlock attempts.</li>
-            <li>No sensitive information beyond unlock attempt events and local photos is accessed or transmitted.</li>
-            <li>The app complies with Google Play policies and ensures that permissions are used responsibly and transparently.</li>
+            <li data-i18n="li_respect1">The Accessibility Service is used solely for security monitoring related to device unlock attempts.</li>
+            <li data-i18n="li_respect2">No sensitive information beyond unlock attempt events and local photos is accessed or transmitted.</li>
+            <li data-i18n="li_respect3">The app complies with Google Play policies and ensures that permissions are used responsibly and transparently.</li>
         </ul>
 
-        <h2>How to enable Accessibility Service?</h2>
+        <h2 data-i18n="h2_enable">How to enable Accessibility Service?</h2>
         <ol>
-            <li>Open your device's Settings.</li>
-            <li>Go to Accessibility.</li>
-            <li>Find and select "Remocat Accessibility Service".</li>
-            <li>Enable it by toggling the switch.</li>
+            <li data-i18n="li_enable1">Open your device's Settings.</li>
+            <li data-i18n="li_enable2">Go to Accessibility.</li>
+            <li data-i18n="li_enable3">Find and select "Remocat Accessibility Service".</li>
+            <li data-i18n="li_enable4">Enable it by toggling the switch.</li>
         </ol>
 
-        <p>
+        <p data-i18n="p_closing">
             By enabling this permission, you allow Remocat to protect your device by monitoring and recording
             unauthorized unlock attempts in full respect of your privacy.
         </p>
-        <p>Thank you for trusting Remocat to keep your device safe.</p>
+        <p data-i18n="p_thanks">Thank you for trusting Remocat to keep your device safe.</p>
     </div>
 </main>
 
 <footer class="footer">
-    <div class="wrap">&copy; 2026 Remocat. All rights reserved.</div>
+    <div class="wrap" data-i18n="footer">&copy; 2026 Remocat. All rights reserved.</div>
 </footer>
+
+<script>
+window.REMOCAT_I18N = {
+    en: {
+        __title: "Accessibility Service — Remocat",
+        eyebrow: "Accessibility",
+        h1: "Accessibility Service",
+        h2_why: "Why do we need Accessibility Service?",
+        p_why: "Remocat requires the Accessibility Service permission to monitor failed unlock attempts on your device. This allows the app to detect unauthorized access attempts and automatically take a photo of the person trying to unlock your device.",
+        h2_data: "What data is collected?",
+        li_data1: "No personal data or images are shared or uploaded anywhere.",
+        li_data2: "Photos are stored only locally on your device for your review.",
+        h2_respect: "How does Remocat respect your privacy?",
+        li_respect1: "The Accessibility Service is used solely for security monitoring related to device unlock attempts.",
+        li_respect2: "No sensitive information beyond unlock attempt events and local photos is accessed or transmitted.",
+        li_respect3: "The app complies with Google Play policies and ensures that permissions are used responsibly and transparently.",
+        h2_enable: "How to enable Accessibility Service?",
+        li_enable1: "Open your device's Settings.",
+        li_enable2: "Go to Accessibility.",
+        li_enable3: "Find and select \"Remocat Accessibility Service\".",
+        li_enable4: "Enable it by toggling the switch.",
+        p_closing: "By enabling this permission, you allow Remocat to protect your device by monitoring and recording unauthorized unlock attempts in full respect of your privacy.",
+        p_thanks: "Thank you for trusting Remocat to keep your device safe.",
+        footer: "&copy; 2026 Remocat. All rights reserved."
+    },
+    it: {
+        __title: "Servizio di Accessibilità — Remocat",
+        eyebrow: "Accessibilità",
+        h1: "Servizio di Accessibilità",
+        h2_why: "Perché abbiamo bisogno del Servizio di Accessibilità?",
+        p_why: "Remocat richiede l'autorizzazione al Servizio di Accessibilità per monitorare i tentativi di sblocco falliti sul tuo dispositivo. Questo consente all'app di rilevare i tentativi di accesso non autorizzati e di scattare automaticamente una foto della persona che tenta di sbloccare il dispositivo.",
+        h2_data: "Quali dati vengono raccolti?",
+        li_data1: "Nessun dato personale o immagine viene condiviso o caricato altrove.",
+        li_data2: "Le foto vengono conservate solo localmente sul tuo dispositivo, a tua disposizione.",
+        h2_respect: "Come rispetta la tua privacy Remocat?",
+        li_respect1: "Il Servizio di Accessibilità viene utilizzato esclusivamente per il monitoraggio di sicurezza relativo ai tentativi di sblocco del dispositivo.",
+        li_respect2: "Nessuna informazione sensibile oltre agli eventi di tentativo di sblocco e alle foto locali viene consultata o trasmessa.",
+        li_respect3: "L'app è conforme alle policy di Google Play e garantisce che le autorizzazioni siano utilizzate in modo responsabile e trasparente.",
+        h2_enable: "Come abilitare il Servizio di Accessibilità?",
+        li_enable1: "Apri le Impostazioni del tuo dispositivo.",
+        li_enable2: "Vai su Accessibilità.",
+        li_enable3: "Trova e seleziona \"Servizio di Accessibilità Remocat\".",
+        li_enable4: "Abilitalo attivando l'interruttore.",
+        p_closing: "Abilitando questa autorizzazione, consenti a Remocat di proteggere il tuo dispositivo monitorando e registrando i tentativi di sblocco non autorizzati nel pieno rispetto della tua privacy.",
+        p_thanks: "Grazie per aver scelto Remocat per mantenere sicuro il tuo dispositivo.",
+        footer: "&copy; 2026 Remocat. Tutti i diritti riservati."
+    },
+    es: {
+        __title: "Servicio de Accesibilidad — Remocat",
+        eyebrow: "Accesibilidad",
+        h1: "Servicio de Accesibilidad",
+        h2_why: "¿Por qué necesitamos el Servicio de Accesibilidad?",
+        p_why: "Remocat requiere el permiso del Servicio de Accesibilidad para supervisar los intentos fallidos de desbloqueo en tu dispositivo. Esto permite que la app detecte intentos de acceso no autorizados y tome automáticamente una foto de la persona que intenta desbloquear tu dispositivo.",
+        h2_data: "¿Qué datos se recopilan?",
+        li_data1: "Ningún dato personal o imagen se comparte ni se sube a ningún sitio.",
+        li_data2: "Las fotos se guardan solo localmente en tu dispositivo para que las revises.",
+        h2_respect: "¿Cómo respeta Remocat tu privacidad?",
+        li_respect1: "El Servicio de Accesibilidad se utiliza únicamente para la supervisión de seguridad relacionada con los intentos de desbloqueo del dispositivo.",
+        li_respect2: "No se accede ni se transmite ninguna información sensible más allá de los eventos de intento de desbloqueo y las fotos locales.",
+        li_respect3: "La app cumple con las políticas de Google Play y garantiza que los permisos se utilicen de forma responsable y transparente.",
+        h2_enable: "¿Cómo habilitar el Servicio de Accesibilidad?",
+        li_enable1: "Abre los Ajustes de tu dispositivo.",
+        li_enable2: "Ve a Accesibilidad.",
+        li_enable3: "Busca y selecciona \"Servicio de Accesibilidad de Remocat\".",
+        li_enable4: "Actívalo pulsando el interruptor.",
+        p_closing: "Al habilitar este permiso, permites que Remocat proteja tu dispositivo supervisando y registrando los intentos de desbloqueo no autorizados con pleno respeto a tu privacidad.",
+        p_thanks: "Gracias por confiar en Remocat para mantener seguro tu dispositivo.",
+        footer: "&copy; 2026 Remocat. Todos los derechos reservados."
+    },
+    fr: {
+        __title: "Service d'accessibilité — Remocat",
+        eyebrow: "Accessibilité",
+        h1: "Service d'accessibilité",
+        h2_why: "Pourquoi avons-nous besoin du service d'accessibilité ?",
+        p_why: "Remocat nécessite l'autorisation du service d'accessibilité pour surveiller les tentatives de déverrouillage échouées sur votre appareil. Cela permet à l'application de détecter les tentatives d'accès non autorisées et de prendre automatiquement une photo de la personne qui tente de déverrouiller votre appareil.",
+        h2_data: "Quelles données sont collectées ?",
+        li_data1: "Aucune donnée personnelle ni image n'est partagée ou téléversée où que ce soit.",
+        li_data2: "Les photos sont conservées uniquement localement sur votre appareil, pour votre consultation.",
+        h2_respect: "Comment Remocat respecte-t-il votre vie privée ?",
+        li_respect1: "Le service d'accessibilité est utilisé uniquement pour la surveillance de sécurité liée aux tentatives de déverrouillage de l'appareil.",
+        li_respect2: "Aucune information sensible au-delà des événements de tentative de déverrouillage et des photos locales n'est consultée ou transmise.",
+        li_respect3: "L'application est conforme aux politiques de Google Play et garantit que les autorisations sont utilisées de manière responsable et transparente.",
+        h2_enable: "Comment activer le service d'accessibilité ?",
+        li_enable1: "Ouvrez les Paramètres de votre appareil.",
+        li_enable2: "Allez dans Accessibilité.",
+        li_enable3: "Trouvez et sélectionnez « Service d'accessibilité Remocat ».",
+        li_enable4: "Activez-le en basculant l'interrupteur.",
+        p_closing: "En activant cette autorisation, vous permettez à Remocat de protéger votre appareil en surveillant et en enregistrant les tentatives de déverrouillage non autorisées dans le plein respect de votre vie privée.",
+        p_thanks: "Merci de faire confiance à Remocat pour garder votre appareil en sécurité.",
+        footer: "&copy; 2026 Remocat. Tous droits réservés."
+    },
+    hi: {
+        __title: "एक्सेसिबिलिटी सेवा — Remocat",
+        eyebrow: "एक्सेसिबिलिटी",
+        h1: "एक्सेसिबिलिटी सेवा",
+        h2_why: "हमें एक्सेसिबिलिटी सेवा की आवश्यकता क्यों है?",
+        p_why: "Remocat को आपके डिवाइस पर विफल अनलॉक प्रयासों की निगरानी के लिए एक्सेसिबिलिटी सेवा अनुमति की आवश्यकता होती है। यह ऐप को अनधिकृत पहुँच प्रयासों का पता लगाने और आपके डिवाइस को अनलॉक करने की कोशिश करने वाले व्यक्ति की स्वचालित रूप से फोटो लेने की अनुमति देता है।",
+        h2_data: "कौन सा डेटा एकत्र किया जाता है?",
+        li_data1: "कोई भी व्यक्तिगत डेटा या छवि कहीं भी साझा या अपलोड नहीं की जाती।",
+        li_data2: "फ़ोटो केवल आपके डिवाइस पर स्थानीय रूप से आपकी समीक्षा के लिए संग्रहीत की जाती हैं।",
+        h2_respect: "Remocat आपकी गोपनीयता का सम्मान कैसे करता है?",
+        li_respect1: "एक्सेसिबिलिटी सेवा का उपयोग केवल डिवाइस अनलॉक प्रयासों से संबंधित सुरक्षा निगरानी के लिए किया जाता है।",
+        li_respect2: "अनलॉक प्रयास घटनाओं और स्थानीय फ़ोटो के अलावा किसी भी संवेदनशील जानकारी तक पहुँच या उसका प्रसारण नहीं किया जाता।",
+        li_respect3: "ऐप Google Play नीतियों का पालन करता है और सुनिश्चित करता है कि अनुमतियों का उपयोग जिम्मेदारी और पारदर्शिता के साथ किया जाए।",
+        h2_enable: "एक्सेसिबिलिटी सेवा कैसे सक्षम करें?",
+        li_enable1: "अपने डिवाइस की सेटिंग्स खोलें।",
+        li_enable2: "एक्सेसिबिलिटी पर जाएँ।",
+        li_enable3: "\"Remocat एक्सेसिबिलिटी सेवा\" खोजें और चुनें।",
+        li_enable4: "स्विच को टॉगल करके इसे सक्षम करें।",
+        p_closing: "इस अनुमति को सक्षम करके, आप Remocat को आपकी गोपनीयता का पूरा सम्मान करते हुए अनधिकृत अनलॉक प्रयासों की निगरानी और रिकॉर्डिंग करके आपके डिवाइस की सुरक्षा करने की अनुमति देते हैं।",
+        p_thanks: "अपने डिवाइस को सुरक्षित रखने के लिए Remocat पर भरोसा करने हेतु धन्यवाद।",
+        footer: "&copy; 2026 Remocat. सर्वाधिकार सुरक्षित।"
+    }
+};
+</script>
+<script src="i18n.js"></script>
 
 </body>
 </html>

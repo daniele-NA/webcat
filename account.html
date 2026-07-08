@@ -15,39 +15,136 @@
 <body>
 
 <header class="header">
-    <div class="brand">
-        <img src="remocat.svg" alt="Remocat"/>
-        <span>Remocat</span>
+    <div class="header-inner">
+        <div class="brand">
+            <img src="remocat.svg" alt="Remocat"/>
+            <span>Remocat</span>
+        </div>
+        <div class="lang-switch">
+            <select id="langSelect" aria-label="Language / Lingua">
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
     </div>
 </header>
 
 <main class="wrap">
     <div class="page-head">
-        <p class="eyebrow">Account</p>
-        <h1>Account Deletion Request</h1>
-        <p class="subtitle">How to request the deletion of your account and associated data.</p>
+        <p class="eyebrow" data-i18n="eyebrow">Account</p>
+        <h1 data-i18n="h1">Account Deletion Request</h1>
+        <p class="subtitle" data-i18n="subtitle">How to request the deletion of your account and associated data.</p>
     </div>
 
     <div class="content">
-        <h2>Contact support</h2>
-        <p>To delete your Remocat account and all associated data, email our support team.</p>
-        <p><strong>Email:</strong> <a href="mailto:crescenziaziendale@gmail.com">crescenziaziendale@gmail.com</a></p>
+        <h2 data-i18n="h2_contact">Contact support</h2>
+        <p data-i18n="p_contact">To delete your Remocat account and all associated data, email our support team.</p>
+        <p data-i18n="p_email"><strong>Email:</strong> <a href="mailto:crescenziaziendale@gmail.com">crescenziaziendale@gmail.com</a></p>
 
-        <h2>Email requirements</h2>
+        <h2 data-i18n="h2_req">Email requirements</h2>
         <ul>
-            <li>Subject: <strong>Delete Remocat Account</strong></li>
-            <li>Your registered email address</li>
-            <li>(Optional) Brief message confirming your intention</li>
+            <li data-i18n="li_subject">Subject: <strong>Delete Remocat Account</strong></li>
+            <li data-i18n="li_regemail">Your registered email address</li>
+            <li data-i18n="li_optional">(Optional) Brief message confirming your intention</li>
         </ul>
 
-        <h2>Processing time</h2>
-        <p>Requests are processed within 7 days. Some data may be retained if legally required.</p>
+        <h2 data-i18n="h2_time">Processing time</h2>
+        <p data-i18n="p_time">Requests are processed within 7 days. Some data may be retained if legally required.</p>
     </div>
 </main>
 
 <footer class="footer">
-    <div class="wrap">&copy; 2026 Remocat. All rights reserved.</div>
+    <div class="wrap" data-i18n="footer">&copy; 2026 Remocat. All rights reserved.</div>
 </footer>
+
+<script>
+window.REMOCAT_I18N = {
+    en: {
+        __title: "Account Deletion — Remocat",
+        eyebrow: "Account",
+        h1: "Account Deletion Request",
+        subtitle: "How to request the deletion of your account and associated data.",
+        h2_contact: "Contact support",
+        p_contact: "To delete your Remocat account and all associated data, email our support team.",
+        p_email: "<strong>Email:</strong> <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
+        h2_req: "Email requirements",
+        li_subject: "Subject: <strong>Delete Remocat Account</strong>",
+        li_regemail: "Your registered email address",
+        li_optional: "(Optional) Brief message confirming your intention",
+        h2_time: "Processing time",
+        p_time: "Requests are processed within 7 days. Some data may be retained if legally required.",
+        footer: "&copy; 2026 Remocat. All rights reserved."
+    },
+    it: {
+        __title: "Eliminazione dell'account — Remocat",
+        eyebrow: "Account",
+        h1: "Richiesta di eliminazione dell'account",
+        subtitle: "Come richiedere l'eliminazione del tuo account e dei dati associati.",
+        h2_contact: "Contatta l'assistenza",
+        p_contact: "Per eliminare il tuo account Remocat e tutti i dati associati, invia un'email al nostro team di assistenza.",
+        p_email: "<strong>Email:</strong> <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
+        h2_req: "Requisiti dell'email",
+        li_subject: "Oggetto: <strong>Delete Remocat Account</strong>",
+        li_regemail: "Il tuo indirizzo email registrato",
+        li_optional: "(Facoltativo) Un breve messaggio che conferma la tua intenzione",
+        h2_time: "Tempi di elaborazione",
+        p_time: "Le richieste vengono elaborate entro 7 giorni. Alcuni dati potrebbero essere conservati se richiesto dalla legge.",
+        footer: "&copy; 2026 Remocat. Tutti i diritti riservati."
+    },
+    es: {
+        __title: "Eliminación de cuenta — Remocat",
+        eyebrow: "Cuenta",
+        h1: "Solicitud de eliminación de cuenta",
+        subtitle: "Cómo solicitar la eliminación de tu cuenta y los datos asociados.",
+        h2_contact: "Contactar con soporte",
+        p_contact: "Para eliminar tu cuenta de Remocat y todos los datos asociados, envía un correo a nuestro equipo de soporte.",
+        p_email: "<strong>Correo:</strong> <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
+        h2_req: "Requisitos del correo",
+        li_subject: "Asunto: <strong>Delete Remocat Account</strong>",
+        li_regemail: "Tu dirección de correo registrada",
+        li_optional: "(Opcional) Un breve mensaje confirmando tu intención",
+        h2_time: "Tiempo de procesamiento",
+        p_time: "Las solicitudes se procesan en un plazo de 7 días. Algunos datos podrían conservarse si la ley lo exige.",
+        footer: "&copy; 2026 Remocat. Todos los derechos reservados."
+    },
+    fr: {
+        __title: "Suppression de compte — Remocat",
+        eyebrow: "Compte",
+        h1: "Demande de suppression de compte",
+        subtitle: "Comment demander la suppression de votre compte et des données associées.",
+        h2_contact: "Contacter l'assistance",
+        p_contact: "Pour supprimer votre compte Remocat et toutes les données associées, envoyez un e-mail à notre équipe d'assistance.",
+        p_email: "<strong>E-mail :</strong> <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
+        h2_req: "Exigences de l'e-mail",
+        li_subject: "Objet : <strong>Delete Remocat Account</strong>",
+        li_regemail: "Votre adresse e-mail enregistrée",
+        li_optional: "(Facultatif) Un bref message confirmant votre intention",
+        h2_time: "Délai de traitement",
+        p_time: "Les demandes sont traitées sous 7 jours. Certaines données peuvent être conservées si la loi l'exige.",
+        footer: "&copy; 2026 Remocat. Tous droits réservés."
+    },
+    hi: {
+        __title: "खाता हटाना — Remocat",
+        eyebrow: "खाता",
+        h1: "खाता हटाने का अनुरोध",
+        subtitle: "अपना खाता और संबंधित डेटा हटाने का अनुरोध कैसे करें।",
+        h2_contact: "सहायता से संपर्क करें",
+        p_contact: "अपना Remocat खाता और सभी संबंधित डेटा हटाने के लिए, हमारी सहायता टीम को ईमेल करें।",
+        p_email: "<strong>ईमेल:</strong> <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
+        h2_req: "ईमेल आवश्यकताएँ",
+        li_subject: "विषय: <strong>Delete Remocat Account</strong>",
+        li_regemail: "आपका पंजीकृत ईमेल पता",
+        li_optional: "(वैकल्पिक) आपके इरादे की पुष्टि करने वाला संक्षिप्त संदेश",
+        h2_time: "प्रसंस्करण समय",
+        p_time: "अनुरोध 7 दिनों के भीतर संसाधित किए जाते हैं। कानूनी रूप से आवश्यक होने पर कुछ डेटा बनाए रखा जा सकता है।",
+        footer: "&copy; 2026 Remocat. सर्वाधिकार सुरक्षित।"
+    }
+};
+</script>
+<script src="i18n.js"></script>
 
 </body>
 </html>
