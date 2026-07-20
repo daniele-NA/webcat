@@ -50,6 +50,7 @@ img { max-width: 100%; }
 
 /* ---- Language switcher ---- */
 .lang-switch { display: flex; align-items: center; }
+.lang-forced .lang-switch { display: none; }
 .lang-switch select {
     appearance: none;
     -webkit-appearance: none;

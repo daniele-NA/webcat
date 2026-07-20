@@ -4,18 +4,31 @@
    Each page defines window.REMOCAT_I18N before loading this file.
    Translated strings are keyed by the elements' data-i18n value;
    "__title" is a special key applied to document.title.
+
+   The language comes from the "lang" query parameter, so the app
+   can open a page in a given language:  privacy.html?lang=it
+   When that parameter is present the picker in the header is
+   hidden (see the inline snippet in each page's <head>), and the
+   host app is the single source of truth. Without it the page
+   opens in English and the picker lets the visitor switch.
    ============================================================ */
 (function () {
     var LANGS = ['en', 'it', 'es', 'fr', 'hi'];
-    var STORAGE_KEY = 'remocat-lang';
     var DEFAULT = 'en';
+
+    /* Accepts a bare code or a full locale ("it-IT", "es_419") and
+       returns the supported base code, falling back to DEFAULT. */
+    function normalize(raw) {
+        if (!raw) return DEFAULT;
+        var base = String(raw).toLowerCase().split(/[-_]/)[0];
+        return LANGS.indexOf(base) === -1 ? DEFAULT : base;
+    }
 
     function dict(lang) {
         return (window.REMOCAT_I18N && window.REMOCAT_I18N[lang]) || null;
     }
 
     function apply(lang) {
-        if (LANGS.indexOf(lang) === -1) lang = DEFAULT;
         var strings = dict(lang) || dict(DEFAULT) || {};
 
         document.documentElement.lang = lang;
@@ -31,26 +44,15 @@
 
         var sel = document.getElementById('langSelect');
         if (sel) sel.value = lang;
-
-        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
     }
 
     function init() {
-        var lang = DEFAULT;
-        try {
-            var stored = localStorage.getItem(STORAGE_KEY);
-            if (stored) lang = stored;
-        } catch (e) {}
-
-        var urlLang = new URLSearchParams(location.search).get('lang');
-        if (urlLang) lang = urlLang;
-
         var sel = document.getElementById('langSelect');
         if (sel) {
-            sel.addEventListener('change', function () { apply(sel.value); });
+            sel.addEventListener('change', function () { apply(normalize(sel.value)); });
         }
 
-        apply(lang);
+        apply(normalize(new URLSearchParams(location.search).get('lang')));
     }
 
     if (document.readyState === 'loading') {
