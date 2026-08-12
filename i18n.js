@@ -28,6 +28,20 @@
         return (window.REMOCAT_I18N && window.REMOCAT_I18N[lang]) || null;
     }
 
+    /* Same-origin page links must carry the language forward, otherwise every hop
+       resets to English and — inside the host app — the picker reappears. Only when
+       the language was pinned by the caller: on the public site the picker stays. */
+    function propagateLang(lang) {
+        document.querySelectorAll('a[href]').forEach(function (a) {
+            var href = a.getAttribute('href');
+            if (!href || /^([a-z][a-z0-9+.-]*:|\/\/|#)/i.test(href)) return;
+            var hash = href.indexOf('#');
+            var frag = hash === -1 ? '' : href.slice(hash);
+            var path = (hash === -1 ? href : href.slice(0, hash)).split('?')[0];
+            a.setAttribute('href', path + '?lang=' + lang + frag);
+        });
+    }
+
     function apply(lang) {
         var strings = dict(lang) || dict(DEFAULT) || {};
 
@@ -46,13 +60,30 @@
         if (sel) sel.value = lang;
     }
 
+    /* Public site only: remember the visitor's pick for the session, so moving between
+       pages keeps the language without pinning it in the URL (which would hide the picker). */
+    function remember(lang) {
+        try { sessionStorage.setItem('remocat_lang', lang); } catch (e) { /* private mode */ }
+    }
+
+    function remembered() {
+        try { return sessionStorage.getItem('remocat_lang'); } catch (e) { return null; }
+    }
+
     function init() {
         var sel = document.getElementById('langSelect');
         if (sel) {
-            sel.addEventListener('change', function () { apply(normalize(sel.value)); });
+            sel.addEventListener('change', function () {
+                var lang = normalize(sel.value);
+                remember(lang);
+                apply(lang);
+            });
         }
 
-        apply(normalize(new URLSearchParams(location.search).get('lang')));
+        var pinned = new URLSearchParams(location.search).get('lang');
+        var lang = normalize(pinned || remembered());
+        apply(lang);
+        if (pinned) propagateLang(lang);
     }
 
     if (document.readyState === 'loading') {
