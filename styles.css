@@ -63,7 +63,7 @@ img { max-width: 100%; }
 /* Opened from the app: the app owns the language, so the header has nothing left to
    show and takes no room. The native close button already sits top-left. */
 .lang-forced .header { display: none; }
-.lang-forced .page-head { padding-top: 3.5rem; }
+.lang-forced .page-head { padding-top: 1.5rem; }
 
 /* ---- Language switcher ---- */
 .lang-switch { display: flex; align-items: center; }
@@ -90,12 +90,6 @@ img { max-width: 100%; }
 
 /* ---- Page title ---- */
 .page-head { padding: 2.5rem 0 1.5rem; }
-/* labelSmall: 14sp / 20sp / 400 / 0.25 */
-.page-head .eyebrow {
-    margin: 0 0 0.5rem;
-    font-size: 0.875rem; font-weight: 400; line-height: 1.4286; letter-spacing: 0.015625rem;
-    color: var(--accent);
-}
 /* headlineMedium: 28sp / 36sp / 400 / 0 */
 .page-head h1 {
     margin: 0;
