@@ -4,12 +4,13 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Remocat Terms of Service — the terms that govern your use of the Remocat app."/>
-    <meta name="theme-color" content="#0d100f"/>
+    <meta name="theme-color" content="#191932"/>
     <link rel="icon" type="image/svg+xml" href="remocat.svg"/>
     <title>Terms of Service — Remocat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <!-- the same face the app bundles, so the in-app WebView matches the native screens -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..1000&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <!-- When the host app pins a language via ?lang=, hide the picker before first paint. -->
     <script>if (new URLSearchParams(location.search).has('lang')) document.documentElement.classList.add('lang-forced');</script>
@@ -18,10 +19,6 @@
 
 <header class="header">
     <div class="header-inner">
-        <div class="brand">
-            <img src="remocat.svg" alt="Remocat"/>
-            <span>Remocat</span>
-        </div>
         <div class="lang-switch">
             <select id="langSelect" aria-label="Language / Lingua">
                 <option value="en">English</option>
@@ -94,10 +91,6 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="wrap" data-i18n="footer">&copy; 2026 Remocat. All rights reserved.</div>
-</footer>
-
 <script>
 window.REMOCAT_I18N = {
     en: {
@@ -120,8 +113,7 @@ window.REMOCAT_I18N = {
         h2_5: "5. User Responsibility",
         p_5: "Users must keep their devices secure, updated, and prevent unauthorized access. In case of loss or theft, immediately disable Remocat access via support or device security options.",
         h2_6: "6. Limitation of Liability",
-        p_6: "Remocat is not liable for direct or indirect damages from app use or malfunction, including device damage, data loss, or privacy issues. Facial recognition may not be infallible; other device unlocking methods remain available.",
-        footer: "&copy; 2026 Remocat. All rights reserved."
+        p_6: "Remocat is not liable for direct or indirect damages from app use or malfunction, including device damage, data loss, or privacy issues. Facial recognition may not be infallible; other device unlocking methods remain available."
     },
     it: {
         __title: "Termini di Servizio — Remocat",
@@ -143,8 +135,7 @@ window.REMOCAT_I18N = {
         h2_5: "5. Responsabilità dell'Utente",
         p_5: "Gli utenti devono mantenere i propri dispositivi sicuri, aggiornati e prevenire accessi non autorizzati. In caso di smarrimento o furto, disabilita immediatamente l'accesso a Remocat tramite l'assistenza o le opzioni di sicurezza del dispositivo.",
         h2_6: "6. Limitazione di Responsabilità",
-        p_6: "Remocat non è responsabile per danni diretti o indiretti derivanti dall'uso o dal malfunzionamento dell'app, inclusi danni al dispositivo, perdita di dati o problemi di privacy. Il riconoscimento facciale potrebbe non essere infallibile; restano disponibili altri metodi di sblocco del dispositivo.",
-        footer: "&copy; 2026 Remocat. Tutti i diritti riservati."
+        p_6: "Remocat non è responsabile per danni diretti o indiretti derivanti dall'uso o dal malfunzionamento dell'app, inclusi danni al dispositivo, perdita di dati o problemi di privacy. Il riconoscimento facciale potrebbe non essere infallibile; restano disponibili altri metodi di sblocco del dispositivo."
     },
     es: {
         __title: "Términos de Servicio — Remocat",
@@ -166,8 +157,7 @@ window.REMOCAT_I18N = {
         h2_5: "5. Responsabilidad del Usuario",
         p_5: "Los usuarios deben mantener sus dispositivos seguros, actualizados y evitar accesos no autorizados. En caso de pérdida o robo, desactiva de inmediato el acceso a Remocat mediante el soporte o las opciones de seguridad del dispositivo.",
         h2_6: "6. Limitación de Responsabilidad",
-        p_6: "Remocat no se hace responsable de daños directos o indirectos derivados del uso o mal funcionamiento de la app, incluidos daños al dispositivo, pérdida de datos o problemas de privacidad. El reconocimiento facial puede no ser infalible; siguen disponibles otros métodos de desbloqueo del dispositivo.",
-        footer: "&copy; 2026 Remocat. Todos los derechos reservados."
+        p_6: "Remocat no se hace responsable de daños directos o indirectos derivados del uso o mal funcionamiento de la app, incluidos daños al dispositivo, pérdida de datos o problemas de privacidad. El reconocimiento facial puede no ser infalible; siguen disponibles otros métodos de desbloqueo del dispositivo."
     },
     fr: {
         __title: "Conditions d'utilisation — Remocat",
@@ -189,8 +179,7 @@ window.REMOCAT_I18N = {
         h2_5: "5. Responsabilité de l'utilisateur",
         p_5: "Les utilisateurs doivent garder leurs appareils sécurisés, à jour et empêcher tout accès non autorisé. En cas de perte ou de vol, désactivez immédiatement l'accès à Remocat via l'assistance ou les options de sécurité de l'appareil.",
         h2_6: "6. Limitation de responsabilité",
-        p_6: "Remocat n'est pas responsable des dommages directs ou indirects résultant de l'utilisation ou d'un dysfonctionnement de l'application, y compris les dommages à l'appareil, la perte de données ou les problèmes de confidentialité. La reconnaissance faciale peut ne pas être infaillible ; d'autres méthodes de déverrouillage de l'appareil restent disponibles.",
-        footer: "&copy; 2026 Remocat. Tous droits réservés."
+        p_6: "Remocat n'est pas responsable des dommages directs ou indirects résultant de l'utilisation ou d'un dysfonctionnement de l'application, y compris les dommages à l'appareil, la perte de données ou les problèmes de confidentialité. La reconnaissance faciale peut ne pas être infaillible ; d'autres méthodes de déverrouillage de l'appareil restent disponibles."
     },
     hi: {
         __title: "सेवा की शर्तें — Remocat",
@@ -212,8 +201,7 @@ window.REMOCAT_I18N = {
         h2_5: "5. उपयोगकर्ता की जिम्मेदारी",
         p_5: "उपयोगकर्ताओं को अपने डिवाइस सुरक्षित, अद्यतन रखने और अनधिकृत पहुँच को रोकने की आवश्यकता है। खो जाने या चोरी की स्थिति में, सहायता या डिवाइस सुरक्षा विकल्पों के माध्यम से तुरंत Remocat की पहुँच अक्षम करें।",
         h2_6: "6. दायित्व की सीमा",
-        p_6: "Remocat ऐप के उपयोग या खराबी से होने वाले प्रत्यक्ष या अप्रत्यक्ष नुकसान के लिए उत्तरदायी नहीं है, जिसमें डिवाइस क्षति, डेटा हानि या गोपनीयता संबंधी समस्याएँ शामिल हैं। चेहरा पहचान अचूक नहीं हो सकती; डिवाइस अनलॉक करने के अन्य तरीके उपलब्ध रहते हैं।",
-        footer: "&copy; 2026 Remocat. सर्वाधिकार सुरक्षित।"
+        p_6: "Remocat ऐप के उपयोग या खराबी से होने वाले प्रत्यक्ष या अप्रत्यक्ष नुकसान के लिए उत्तरदायी नहीं है, जिसमें डिवाइस क्षति, डेटा हानि या गोपनीयता संबंधी समस्याएँ शामिल हैं। चेहरा पहचान अचूक नहीं हो सकती; डिवाइस अनलॉक करने के अन्य तरीके उपलब्ध रहते हैं।"
     }
 };
 </script>

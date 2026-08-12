@@ -4,12 +4,13 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Why Remocat uses the Accessibility Service and how it respects your privacy."/>
-    <meta name="theme-color" content="#0d100f"/>
+    <meta name="theme-color" content="#191932"/>
     <link rel="icon" type="image/svg+xml" href="remocat.svg"/>
     <title>Accessibility Service — Remocat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <!-- the same face the app bundles, so the in-app WebView matches the native screens -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..1000&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <!-- When the host app pins a language via ?lang=, hide the picker before first paint. -->
     <script>if (new URLSearchParams(location.search).has('lang')) document.documentElement.classList.add('lang-forced');</script>
@@ -18,10 +19,6 @@
 
 <header class="header">
     <div class="header-inner">
-        <div class="brand">
-            <img src="remocat.svg" alt="Remocat"/>
-            <span>Remocat</span>
-        </div>
         <div class="lang-switch">
             <select id="langSelect" aria-label="Language / Lingua">
                 <option value="en">English</option>
@@ -77,10 +74,6 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="wrap" data-i18n="footer">&copy; 2026 Remocat. All rights reserved.</div>
-</footer>
-
 <script>
 window.REMOCAT_I18N = {
     en: {
@@ -102,8 +95,7 @@ window.REMOCAT_I18N = {
         li_enable3: "Find and select \"Remocat Accessibility Service\".",
         li_enable4: "Enable it by toggling the switch.",
         p_closing: "By enabling this permission, you allow Remocat to protect your device by monitoring and recording unauthorized unlock attempts in full respect of your privacy.",
-        p_thanks: "Thank you for trusting Remocat to keep your device safe.",
-        footer: "&copy; 2026 Remocat. All rights reserved."
+        p_thanks: "Thank you for trusting Remocat to keep your device safe."
     },
     it: {
         __title: "Servizio di Accessibilità — Remocat",
@@ -124,8 +116,7 @@ window.REMOCAT_I18N = {
         li_enable3: "Trova e seleziona \"Servizio di Accessibilità Remocat\".",
         li_enable4: "Abilitalo attivando l'interruttore.",
         p_closing: "Abilitando questa autorizzazione, consenti a Remocat di proteggere il tuo dispositivo monitorando e registrando i tentativi di sblocco non autorizzati nel pieno rispetto della tua privacy.",
-        p_thanks: "Grazie per aver scelto Remocat per mantenere sicuro il tuo dispositivo.",
-        footer: "&copy; 2026 Remocat. Tutti i diritti riservati."
+        p_thanks: "Grazie per aver scelto Remocat per mantenere sicuro il tuo dispositivo."
     },
     es: {
         __title: "Servicio de Accesibilidad — Remocat",
@@ -146,8 +137,7 @@ window.REMOCAT_I18N = {
         li_enable3: "Busca y selecciona \"Servicio de Accesibilidad de Remocat\".",
         li_enable4: "Actívalo pulsando el interruptor.",
         p_closing: "Al habilitar este permiso, permites que Remocat proteja tu dispositivo supervisando y registrando los intentos de desbloqueo no autorizados con pleno respeto a tu privacidad.",
-        p_thanks: "Gracias por confiar en Remocat para mantener seguro tu dispositivo.",
-        footer: "&copy; 2026 Remocat. Todos los derechos reservados."
+        p_thanks: "Gracias por confiar en Remocat para mantener seguro tu dispositivo."
     },
     fr: {
         __title: "Service d'accessibilité — Remocat",
@@ -168,8 +158,7 @@ window.REMOCAT_I18N = {
         li_enable3: "Trouvez et sélectionnez « Service d'accessibilité Remocat ».",
         li_enable4: "Activez-le en basculant l'interrupteur.",
         p_closing: "En activant cette autorisation, vous permettez à Remocat de protéger votre appareil en surveillant et en enregistrant les tentatives de déverrouillage non autorisées dans le plein respect de votre vie privée.",
-        p_thanks: "Merci de faire confiance à Remocat pour garder votre appareil en sécurité.",
-        footer: "&copy; 2026 Remocat. Tous droits réservés."
+        p_thanks: "Merci de faire confiance à Remocat pour garder votre appareil en sécurité."
     },
     hi: {
         __title: "एक्सेसिबिलिटी सेवा — Remocat",
@@ -190,8 +179,7 @@ window.REMOCAT_I18N = {
         li_enable3: "\"Remocat एक्सेसिबिलिटी सेवा\" खोजें और चुनें।",
         li_enable4: "स्विच को टॉगल करके इसे सक्षम करें।",
         p_closing: "इस अनुमति को सक्षम करके, आप Remocat को आपकी गोपनीयता का पूरा सम्मान करते हुए अनधिकृत अनलॉक प्रयासों की निगरानी और रिकॉर्डिंग करके आपके डिवाइस की सुरक्षा करने की अनुमति देते हैं।",
-        p_thanks: "अपने डिवाइस को सुरक्षित रखने के लिए Remocat पर भरोसा करने हेतु धन्यवाद।",
-        footer: "&copy; 2026 Remocat. सर्वाधिकार सुरक्षित।"
+        p_thanks: "अपने डिवाइस को सुरक्षित रखने के लिए Remocat पर भरोसा करने हेतु धन्यवाद।"
     }
 };
 </script>

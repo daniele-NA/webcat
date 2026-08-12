@@ -4,12 +4,13 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Remocat Privacy Policy — how we collect, use and protect your personal data."/>
-    <meta name="theme-color" content="#0d100f"/>
+    <meta name="theme-color" content="#191932"/>
     <link rel="icon" type="image/svg+xml" href="remocat.svg"/>
     <title>Privacy Policy — Remocat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <!-- the same face the app bundles, so the in-app WebView matches the native screens -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..1000&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <!-- When the host app pins a language via ?lang=, hide the picker before first paint. -->
     <script>if (new URLSearchParams(location.search).has('lang')) document.documentElement.classList.add('lang-forced');</script>
@@ -18,10 +19,6 @@
 
 <header class="header">
     <div class="header-inner">
-        <div class="brand">
-            <img src="remocat.svg" alt="Remocat"/>
-            <span>Remocat</span>
-        </div>
         <div class="lang-switch">
             <select id="langSelect" aria-label="Language / Lingua">
                 <option value="en">English</option>
@@ -106,10 +103,6 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="wrap" data-i18n="footer">&copy; 2026 Remocat. All rights reserved.</div>
-</footer>
-
 <script>
 window.REMOCAT_I18N = {
     en: {
@@ -149,8 +142,7 @@ window.REMOCAT_I18N = {
         h3_changes: "Changes to This Privacy Policy",
         p_changes: "Policy may be updated. Notifications posted in app or via email.",
         h3_contact: "Contact Us",
-        p_contact: "Email: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
-        footer: "&copy; 2026 Remocat. All rights reserved."
+        p_contact: "Email: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>"
     },
     it: {
         __title: "Informativa sulla Privacy — Remocat",
@@ -189,8 +181,7 @@ window.REMOCAT_I18N = {
         h3_changes: "Modifiche alla Presente Informativa sulla Privacy",
         p_changes: "L'informativa potrebbe essere aggiornata. Le notifiche vengono pubblicate nell'app o inviate via email.",
         h3_contact: "Contattaci",
-        p_contact: "Email: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
-        footer: "&copy; 2026 Remocat. Tutti i diritti riservati."
+        p_contact: "Email: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>"
     },
     es: {
         __title: "Política de Privacidad — Remocat",
@@ -229,8 +220,7 @@ window.REMOCAT_I18N = {
         h3_changes: "Cambios en Esta Política de Privacidad",
         p_changes: "La política puede actualizarse. Las notificaciones se publican en la app o se envían por correo.",
         h3_contact: "Contáctanos",
-        p_contact: "Correo: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
-        footer: "&copy; 2026 Remocat. Todos los derechos reservados."
+        p_contact: "Correo: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>"
     },
     fr: {
         __title: "Politique de confidentialité — Remocat",
@@ -269,8 +259,7 @@ window.REMOCAT_I18N = {
         h3_changes: "Modifications de la présente Politique de confidentialité",
         p_changes: "La politique peut être mise à jour. Les notifications sont publiées dans l'application ou envoyées par e-mail.",
         h3_contact: "Nous contacter",
-        p_contact: "E-mail : <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
-        footer: "&copy; 2026 Remocat. Tous droits réservés."
+        p_contact: "E-mail : <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>"
     },
     hi: {
         __title: "गोपनीयता नीति — Remocat",
@@ -309,8 +298,7 @@ window.REMOCAT_I18N = {
         h3_changes: "इस गोपनीयता नीति में परिवर्तन",
         p_changes: "नीति अद्यतन की जा सकती है। सूचनाएँ ऐप में पोस्ट की जाती हैं या ईमेल द्वारा भेजी जाती हैं।",
         h3_contact: "हमसे संपर्क करें",
-        p_contact: "ईमेल: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>",
-        footer: "&copy; 2026 Remocat. सर्वाधिकार सुरक्षित।"
+        p_contact: "ईमेल: <a href=\"mailto:crescenziaziendale@gmail.com\">crescenziaziendale@gmail.com</a>"
     }
 };
 </script>

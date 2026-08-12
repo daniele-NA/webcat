@@ -4,12 +4,13 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="How to request the deletion of your Remocat account and associated data."/>
-    <meta name="theme-color" content="#0d100f"/>
+    <meta name="theme-color" content="#191932"/>
     <link rel="icon" type="image/svg+xml" href="remocat.svg"/>
     <title>Account Deletion — Remocat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <!-- the same face the app bundles, so the in-app WebView matches the native screens -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..1000&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <!-- When the host app pins a language via ?lang=, hide the picker before first paint. -->
     <script>if (new URLSearchParams(location.search).has('lang')) document.documentElement.classList.add('lang-forced');</script>
@@ -18,10 +19,6 @@
 
 <header class="header">
     <div class="header-inner">
-        <div class="brand">
-            <img src="remocat.svg" alt="Remocat"/>
-            <span>Remocat</span>
-        </div>
         <div class="lang-switch">
             <select id="langSelect" aria-label="Language / Lingua">
                 <option value="en">English</option>
@@ -58,10 +55,6 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="wrap" data-i18n="footer">&copy; 2026 Remocat. All rights reserved.</div>
-</footer>
-
 <script>
 window.REMOCAT_I18N = {
     en: {
@@ -77,8 +70,7 @@ window.REMOCAT_I18N = {
         li_regemail: "Your registered email address",
         li_optional: "(Optional) Brief message confirming your intention",
         h2_time: "Processing time",
-        p_time: "Requests are processed within 7 days. Some data may be retained if legally required.",
-        footer: "&copy; 2026 Remocat. All rights reserved."
+        p_time: "Requests are processed within 7 days. Some data may be retained if legally required."
     },
     it: {
         __title: "Eliminazione dell'account — Remocat",
@@ -93,8 +85,7 @@ window.REMOCAT_I18N = {
         li_regemail: "Il tuo indirizzo email registrato",
         li_optional: "(Facoltativo) Un breve messaggio che conferma la tua intenzione",
         h2_time: "Tempi di elaborazione",
-        p_time: "Le richieste vengono elaborate entro 7 giorni. Alcuni dati potrebbero essere conservati se richiesto dalla legge.",
-        footer: "&copy; 2026 Remocat. Tutti i diritti riservati."
+        p_time: "Le richieste vengono elaborate entro 7 giorni. Alcuni dati potrebbero essere conservati se richiesto dalla legge."
     },
     es: {
         __title: "Eliminación de cuenta — Remocat",
@@ -109,8 +100,7 @@ window.REMOCAT_I18N = {
         li_regemail: "Tu dirección de correo registrada",
         li_optional: "(Opcional) Un breve mensaje confirmando tu intención",
         h2_time: "Tiempo de procesamiento",
-        p_time: "Las solicitudes se procesan en un plazo de 7 días. Algunos datos podrían conservarse si la ley lo exige.",
-        footer: "&copy; 2026 Remocat. Todos los derechos reservados."
+        p_time: "Las solicitudes se procesan en un plazo de 7 días. Algunos datos podrían conservarse si la ley lo exige."
     },
     fr: {
         __title: "Suppression de compte — Remocat",
@@ -125,8 +115,7 @@ window.REMOCAT_I18N = {
         li_regemail: "Votre adresse e-mail enregistrée",
         li_optional: "(Facultatif) Un bref message confirmant votre intention",
         h2_time: "Délai de traitement",
-        p_time: "Les demandes sont traitées sous 7 jours. Certaines données peuvent être conservées si la loi l'exige.",
-        footer: "&copy; 2026 Remocat. Tous droits réservés."
+        p_time: "Les demandes sont traitées sous 7 jours. Certaines données peuvent être conservées si la loi l'exige."
     },
     hi: {
         __title: "खाता हटाना — Remocat",
@@ -141,8 +130,7 @@ window.REMOCAT_I18N = {
         li_regemail: "आपका पंजीकृत ईमेल पता",
         li_optional: "(वैकल्पिक) आपके इरादे की पुष्टि करने वाला संक्षिप्त संदेश",
         h2_time: "प्रसंस्करण समय",
-        p_time: "अनुरोध 7 दिनों के भीतर संसाधित किए जाते हैं। कानूनी रूप से आवश्यक होने पर कुछ डेटा बनाए रखा जा सकता है।",
-        footer: "&copy; 2026 Remocat. सर्वाधिकार सुरक्षित।"
+        p_time: "अनुरोध 7 दिनों के भीतर संसाधित किए जाते हैं। कानूनी रूप से आवश्यक होने पर कुछ डेटा बनाए रखा जा सकता है।"
     }
 };
 </script>
