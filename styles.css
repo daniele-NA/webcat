@@ -129,3 +129,11 @@ img { max-width: 100%; }
     font-size: 0.875rem; font-weight: 400; line-height: 1.4286; letter-spacing: 0.015625rem;
     color: var(--on-surface-muted);
 }
+.nav-card-store {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    grid-column: 1 / -1;
+}
+.nav-card-store .store-icon { flex: 0 0 auto; width: 2rem; height: 2rem; }
+.nav-card-body { display: block; min-width: 0; }
